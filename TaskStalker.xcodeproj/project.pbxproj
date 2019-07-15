@@ -16,7 +16,6 @@
 		EB3F7A1522DA1A5E00683673 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB3F7A1422DA1A5E00683673 /* Assets.xcassets */; };
 		EB3F7A1822DA1A5E00683673 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB3F7A1622DA1A5E00683673 /* LaunchScreen.storyboard */; };
 		EB3F7A2422DA382900683673 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB3F7A2322DA382900683673 /* GoogleService-Info.plist */; };
-		EB8B6BD422DC8A12002B9504 /* StalkItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8B6BD322DC8A12002B9504 /* StalkItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +31,6 @@
 		EB3F7A1722DA1A5E00683673 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB3F7A1922DA1A5E00683673 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB3F7A2322DA382900683673 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		EB8B6BD322DC8A12002B9504 /* StalkItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StalkItem.swift; sourceTree = "<group>"; };
 		FE2EADF087424C199FAD32BE /* Pods_TaskStalker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaskStalker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -93,7 +91,6 @@
 				EB3F7A1622DA1A5E00683673 /* LaunchScreen.storyboard */,
 				EB3F7A0E22DA1A5C00683673 /* Main.storyboard */,
 				EB3F7A1122DA1A5C00683673 /* TaskStalker.xcdatamodeld */,
-				EB8B6BD322DC8A12002B9504 /* StalkItem.swift */,
 				EB3F7A0A22DA1A5C00683673 /* AppDelegate.swift */,
 				EB3F7A1422DA1A5E00683673 /* Assets.xcassets */,
 			);
@@ -219,7 +216,6 @@
 				EB3F7A1322DA1A5C00683673 /* TaskStalker.xcdatamodeld in Sources */,
 				EB3F7A0D22DA1A5C00683673 /* ViewController.swift in Sources */,
 				EB3F7A0B22DA1A5C00683673 /* AppDelegate.swift in Sources */,
-				EB8B6BD422DC8A12002B9504 /* StalkItem.swift in Sources */,
 				EB38DA2322DB8517002C61BE /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
