@@ -45,7 +45,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                 newItem.name = name.text!
                 newItem.stalkPeriod = period.text!
                 self.tempArray.append(newItem)
-                self.tableView.reloadData()
                 self.saveItems()
             }
         }
@@ -90,11 +89,11 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         cell.textLabel?.textColor = FlatSand()
         cell.detailTextLabel?.textColor = FlatSand()
-        cell.textLabel?.backgroundColor = FlatMint()
-        cell.detailTextLabel?.backgroundColor = FlatMint()
+        cell.textLabel?.backgroundColor = FlatMintDark()
+        cell.detailTextLabel?.backgroundColor = FlatMintDark()
         cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 17.0)
         cell.detailTextLabel?.font = UIFont.boldSystemFont(ofSize: 12.0)
-        cell.backgroundColor = FlatMint().darken(byPercentage: CGFloat(indexPath.row) / CGFloat(tempArray.count))
+        cell.backgroundColor = FlatMintDark().darken(byPercentage: CGFloat(indexPath.row) / CGFloat(tempArray.count))
         
         return cell
     }
@@ -108,13 +107,34 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.tableView.reloadData()
     }
     
-    func loadItems() {
-        let request: NSFetchRequest<StalkItem> = StalkItem.fetchRequest()
+    func loadItems(with request: NSFetchRequest<StalkItem> = StalkItem.fetchRequest()) {
         do {
             tempArray = try self.context.fetch(request)
         } catch {
             print("Error fetching data from context, \(error)")
         }
+        self.tableView.reloadData()
     }
 
+}
+
+//MARK: - SearchBar methods
+extension MainViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let request: NSFetchRequest<StalkItem> = StalkItem.fetchRequest()
+        request.predicate = NSPredicate(format: "name CONTAINS[cd] %@", searchBar.text!)
+        request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+        loadItems(with: request)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text?.count == 0 {
+            loadItems()
+            
+            DispatchQueue.main.async {
+                searchBar.resignFirstResponder()
+            }
+            
+        }
+    }
 }
