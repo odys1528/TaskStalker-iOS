@@ -1,0 +1,440 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		144FF54761E5902B70A59EDD /* Pods_TaskStalker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE2EADF087424C199FAD32BE /* Pods_TaskStalker.framework */; };
+		EB38DA2322DB8517002C61BE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB38DA2222DB8517002C61BE /* MainViewController.swift */; };
+		EB3F7A0B22DA1A5C00683673 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3F7A0A22DA1A5C00683673 /* AppDelegate.swift */; };
+		EB3F7A0D22DA1A5C00683673 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3F7A0C22DA1A5C00683673 /* ViewController.swift */; };
+		EB3F7A1022DA1A5C00683673 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB3F7A0E22DA1A5C00683673 /* Main.storyboard */; };
+		EB3F7A1322DA1A5C00683673 /* TaskStalker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB3F7A1122DA1A5C00683673 /* TaskStalker.xcdatamodeld */; };
+		EB3F7A1522DA1A5E00683673 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB3F7A1422DA1A5E00683673 /* Assets.xcassets */; };
+		EB3F7A1822DA1A5E00683673 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB3F7A1622DA1A5E00683673 /* LaunchScreen.storyboard */; };
+		EB3F7A2422DA382900683673 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB3F7A2322DA382900683673 /* GoogleService-Info.plist */; };
+		EB8B6BD422DC8A12002B9504 /* StalkItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8B6BD322DC8A12002B9504 /* StalkItem.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		938FC4CC8F76DF0BA77821C4 /* Pods-TaskStalker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskStalker.debug.xcconfig"; path = "Target Support Files/Pods-TaskStalker/Pods-TaskStalker.debug.xcconfig"; sourceTree = "<group>"; };
+		E5838F34A6965E68A3C51500 /* Pods-TaskStalker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskStalker.release.xcconfig"; path = "Target Support Files/Pods-TaskStalker/Pods-TaskStalker.release.xcconfig"; sourceTree = "<group>"; };
+		EB38DA2222DB8517002C61BE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = TaskStalker/MainViewController.swift; sourceTree = SOURCE_ROOT; };
+		EB3F7A0722DA1A5C00683673 /* TaskStalker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskStalker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB3F7A0A22DA1A5C00683673 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EB3F7A0C22DA1A5C00683673 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EB3F7A0F22DA1A5C00683673 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EB3F7A1222DA1A5C00683673 /* TaskStalker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaskStalker.xcdatamodel; sourceTree = "<group>"; };
+		EB3F7A1422DA1A5E00683673 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EB3F7A1722DA1A5E00683673 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EB3F7A1922DA1A5E00683673 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB3F7A2322DA382900683673 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EB8B6BD322DC8A12002B9504 /* StalkItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StalkItem.swift; sourceTree = "<group>"; };
+		FE2EADF087424C199FAD32BE /* Pods_TaskStalker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaskStalker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EB3F7A0422DA1A5C00683673 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				144FF54761E5902B70A59EDD /* Pods_TaskStalker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11DB921E5BB58C359289240D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE2EADF087424C199FAD32BE /* Pods_TaskStalker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		18B69C81BC703CC3E039CDDF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				938FC4CC8F76DF0BA77821C4 /* Pods-TaskStalker.debug.xcconfig */,
+				E5838F34A6965E68A3C51500 /* Pods-TaskStalker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EB3F79FE22DA1A5C00683673 = {
+			isa = PBXGroup;
+			children = (
+				EB3F7A0922DA1A5C00683673 /* TaskStalker */,
+				EB3F7A0822DA1A5C00683673 /* Products */,
+				18B69C81BC703CC3E039CDDF /* Pods */,
+				11DB921E5BB58C359289240D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EB3F7A0822DA1A5C00683673 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB3F7A0722DA1A5C00683673 /* TaskStalker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EB3F7A0922DA1A5C00683673 /* TaskStalker */ = {
+			isa = PBXGroup;
+			children = (
+				EB3F7A0C22DA1A5C00683673 /* ViewController.swift */,
+				EB3F7A2322DA382900683673 /* GoogleService-Info.plist */,
+				EB3F7A1622DA1A5E00683673 /* LaunchScreen.storyboard */,
+				EB3F7A0E22DA1A5C00683673 /* Main.storyboard */,
+				EB38DA2222DB8517002C61BE /* MainViewController.swift */,
+				EB8B6BD322DC8A12002B9504 /* StalkItem.swift */,
+				EB3F7A1922DA1A5E00683673 /* Info.plist */,
+				EB3F7A1122DA1A5C00683673 /* TaskStalker.xcdatamodeld */,
+				EB3F7A1422DA1A5E00683673 /* Assets.xcassets */,
+				EB3F7A0A22DA1A5C00683673 /* AppDelegate.swift */,
+			);
+			path = TaskStalker;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EB3F7A0622DA1A5C00683673 /* TaskStalker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB3F7A1C22DA1A5E00683673 /* Build configuration list for PBXNativeTarget "TaskStalker" */;
+			buildPhases = (
+				2C6E62EE9B92AF9FEC2FADB5 /* [CP] Check Pods Manifest.lock */,
+				EB3F7A0322DA1A5C00683673 /* Sources */,
+				EB3F7A0422DA1A5C00683673 /* Frameworks */,
+				EB3F7A0522DA1A5C00683673 /* Resources */,
+				E5226F7398ECCDF9E2194B92 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TaskStalker;
+			productName = TaskStalker;
+			productReference = EB3F7A0722DA1A5C00683673 /* TaskStalker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EB3F79FF22DA1A5C00683673 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Jolanta Zakrzewska";
+				TargetAttributes = {
+					EB3F7A0622DA1A5C00683673 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = EB3F7A0222DA1A5C00683673 /* Build configuration list for PBXProject "TaskStalker" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EB3F79FE22DA1A5C00683673;
+			productRefGroup = EB3F7A0822DA1A5C00683673 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EB3F7A0622DA1A5C00683673 /* TaskStalker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EB3F7A0522DA1A5C00683673 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB3F7A1822DA1A5E00683673 /* LaunchScreen.storyboard in Resources */,
+				EB3F7A2422DA382900683673 /* GoogleService-Info.plist in Resources */,
+				EB3F7A1522DA1A5E00683673 /* Assets.xcassets in Resources */,
+				EB3F7A1022DA1A5C00683673 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C6E62EE9B92AF9FEC2FADB5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TaskStalker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5226F7398ECCDF9E2194B92 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TaskStalker/Pods-TaskStalker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TaskStalker/Pods-TaskStalker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TaskStalker/Pods-TaskStalker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EB3F7A0322DA1A5C00683673 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB3F7A1322DA1A5C00683673 /* TaskStalker.xcdatamodeld in Sources */,
+				EB3F7A0D22DA1A5C00683673 /* ViewController.swift in Sources */,
+				EB3F7A0B22DA1A5C00683673 /* AppDelegate.swift in Sources */,
+				EB8B6BD422DC8A12002B9504 /* StalkItem.swift in Sources */,
+				EB38DA2322DB8517002C61BE /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EB3F7A0E22DA1A5C00683673 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB3F7A0F22DA1A5C00683673 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EB3F7A1622DA1A5E00683673 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB3F7A1722DA1A5E00683673 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EB3F7A1A22DA1A5E00683673 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EB3F7A1B22DA1A5E00683673 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EB3F7A1D22DA1A5E00683673 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 938FC4CC8F76DF0BA77821C4 /* Pods-TaskStalker.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V457A225M9;
+				INFOPLIST_FILE = TaskStalker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nana.taskstalker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EB3F7A1E22DA1A5E00683673 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5838F34A6965E68A3C51500 /* Pods-TaskStalker.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V457A225M9;
+				INFOPLIST_FILE = TaskStalker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nana.taskstalker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EB3F7A0222DA1A5C00683673 /* Build configuration list for PBXProject "TaskStalker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB3F7A1A22DA1A5E00683673 /* Debug */,
+				EB3F7A1B22DA1A5E00683673 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB3F7A1C22DA1A5E00683673 /* Build configuration list for PBXNativeTarget "TaskStalker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB3F7A1D22DA1A5E00683673 /* Debug */,
+				EB3F7A1E22DA1A5E00683673 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EB3F7A1122DA1A5C00683673 /* TaskStalker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EB3F7A1222DA1A5C00683673 /* TaskStalker.xcdatamodel */,
+			);
+			currentVersion = EB3F7A1222DA1A5C00683673 /* TaskStalker.xcdatamodel */;
+			path = TaskStalker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EB3F79FF22DA1A5C00683673 /* Project object */;
+}
