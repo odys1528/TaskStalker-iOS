@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import ChameleonFramework
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -16,6 +17,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.separatorStyle = .none
 
         if let user = Auth.auth().currentUser?.email {
             print(user)
@@ -77,6 +80,14 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "StalkCell")
         cell.textLabel?.text = "\(self.tempArray[indexPath.row].name) (\(self.tempArray[indexPath.row].email))"
         cell.detailTextLabel?.text = self.tempArray[indexPath.row].stalkPeriod
+        
+        cell.textLabel?.textColor = FlatSand()
+        cell.detailTextLabel?.textColor = FlatSand()
+        cell.textLabel?.backgroundColor = FlatMintDark()
+        cell.detailTextLabel?.backgroundColor = FlatMintDark()
+        cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 17.0)
+        cell.detailTextLabel?.font = UIFont.boldSystemFont(ofSize: 12.0)
+        cell.backgroundColor = FlatMintDark().darken(byPercentage: CGFloat(indexPath.row) / CGFloat(tempArray.count))
         
         return cell
     }

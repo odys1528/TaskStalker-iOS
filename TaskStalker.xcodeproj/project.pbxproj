@@ -86,16 +86,16 @@
 		EB3F7A0922DA1A5C00683673 /* TaskStalker */ = {
 			isa = PBXGroup;
 			children = (
-				EB3F7A0C22DA1A5C00683673 /* ViewController.swift */,
 				EB3F7A2322DA382900683673 /* GoogleService-Info.plist */,
+				EB3F7A1922DA1A5E00683673 /* Info.plist */,
+				EB3F7A0C22DA1A5C00683673 /* ViewController.swift */,
+				EB38DA2222DB8517002C61BE /* MainViewController.swift */,
 				EB3F7A1622DA1A5E00683673 /* LaunchScreen.storyboard */,
 				EB3F7A0E22DA1A5C00683673 /* Main.storyboard */,
-				EB38DA2222DB8517002C61BE /* MainViewController.swift */,
-				EB8B6BD322DC8A12002B9504 /* StalkItem.swift */,
-				EB3F7A1922DA1A5E00683673 /* Info.plist */,
 				EB3F7A1122DA1A5C00683673 /* TaskStalker.xcdatamodeld */,
-				EB3F7A1422DA1A5E00683673 /* Assets.xcassets */,
+				EB8B6BD322DC8A12002B9504 /* StalkItem.swift */,
 				EB3F7A0A22DA1A5C00683673 /* AppDelegate.swift */,
+				EB3F7A1422DA1A5E00683673 /* Assets.xcassets */,
 			);
 			path = TaskStalker;
 			sourceTree = "<group>";
