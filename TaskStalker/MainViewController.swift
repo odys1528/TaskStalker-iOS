@@ -10,6 +10,13 @@ import UIKit
 import Firebase
 import ChameleonFramework
 import CoreData
+import SwipeCellKit
+
+class CustomStalkCell: SwipeTableViewCell {
+    @IBOutlet weak var nameLabel: UITextView!
+    @IBOutlet weak var emailLabel: UITextView!
+    @IBOutlet weak var periodLabel: UITextView!
+}
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -23,12 +30,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.separatorStyle = .none
         
         loadItems()
-
-        if let user = Auth.auth().currentUser?.email {
-            print(user)
-        } else {
-            print("no user")
-        }
         
     }
     
@@ -83,16 +84,21 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "StalkCell")
-        cell.textLabel?.text = "\(self.tempArray[indexPath.row].name!) (\(self.tempArray[indexPath.row].email!))"
-        cell.detailTextLabel?.text = self.tempArray[indexPath.row].stalkPeriod
+        let cell = tableView.dequeueReusableCell(withIdentifier: "StalkCell", for: indexPath) as! CustomStalkCell
+        cell.delegate = self
+        cell.nameLabel?.text = self.tempArray[indexPath.row].name
+        cell.emailLabel?.text = self.tempArray[indexPath.row].email
+        cell.periodLabel?.text = self.tempArray[indexPath.row].stalkPeriod
         
-        cell.textLabel?.textColor = FlatSand()
-        cell.detailTextLabel?.textColor = FlatSand()
-        cell.textLabel?.backgroundColor = FlatMintDark()
-        cell.detailTextLabel?.backgroundColor = FlatMintDark()
-        cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 17.0)
-        cell.detailTextLabel?.font = UIFont.boldSystemFont(ofSize: 12.0)
+        cell.nameLabel?.textColor = FlatSand()
+        cell.emailLabel?.textColor = FlatSand()
+        cell.periodLabel?.textColor = FlatSand()
+        cell.nameLabel?.backgroundColor = FlatMintDark()
+        cell.emailLabel?.backgroundColor = FlatMintDark()
+        cell.periodLabel?.backgroundColor = FlatMintDark()
+        cell.nameLabel?.font = UIFont.boldSystemFont(ofSize: 17.0)
+        cell.emailLabel?.font = UIFont.systemFont(ofSize: 12.0)
+        cell.periodLabel?.font = UIFont.systemFont(ofSize: 12.0)
         cell.backgroundColor = FlatMintDark().darken(byPercentage: CGFloat(indexPath.row) / CGFloat(tempArray.count))
         
         return cell
@@ -136,5 +142,28 @@ extension MainViewController: UISearchBarDelegate {
             }
             
         }
+    }
+}
+
+//MARK: - SwipeCell
+extension MainViewController: SwipeTableViewCellDelegate {
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+        guard orientation == .right else { return nil }
+        
+        let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
+            // handle action by updating model with deletion
+        }
+        
+        // customize the action appearance
+        deleteAction.image = UIImage(named: "delete")
+        
+        return [deleteAction]
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeOptions {
+        var options = SwipeOptions()
+        options.expansionStyle = .destructive
+        options.transitionStyle = .reveal
+        return options
     }
 }

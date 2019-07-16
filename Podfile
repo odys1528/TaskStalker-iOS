@@ -11,5 +11,6 @@ target 'TaskStalker' do
   pod 'Firebase/Database'
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
   pod 'SVProgressHUD'
+  pod 'SwipeCellKit'
 
 end
