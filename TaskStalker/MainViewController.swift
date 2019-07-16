@@ -12,7 +12,7 @@ import ChameleonFramework
 import CoreData
 import SwipeCellKit
 
-class CustomStalkCell: SwipeTableViewCell {
+class CustomStalkCell: UITableViewCell {//SwipeTableViewCell {
     @IBOutlet weak var nameLabel: UITextView!
     @IBOutlet weak var emailLabel: UITextView!
     @IBOutlet weak var periodLabel: UITextView!
@@ -33,6 +33,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
+    //MARK: - new stalk
     @IBAction func addStalk(_ sender: Any) {
         var name = UITextField()
         var email = UITextField()
@@ -69,6 +70,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         present(alert, animated: true, completion: nil)
     }
     
+    //MARK: - tableView stuff
     @IBAction func logout(_ sender: Any) {
         let firebaseAuth = Auth.auth()
         do {
@@ -85,7 +87,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StalkCell", for: indexPath) as! CustomStalkCell
-        cell.delegate = self
+//        cell.delegate = self
         cell.nameLabel?.text = self.tempArray[indexPath.row].name
         cell.emailLabel?.text = self.tempArray[indexPath.row].email
         cell.periodLabel?.text = self.tempArray[indexPath.row].stalkPeriod
@@ -93,13 +95,15 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.nameLabel?.textColor = FlatSand()
         cell.emailLabel?.textColor = FlatSand()
         cell.periodLabel?.textColor = FlatSand()
-        cell.nameLabel?.backgroundColor = FlatMintDark()
-        cell.emailLabel?.backgroundColor = FlatMintDark()
-        cell.periodLabel?.backgroundColor = FlatMintDark()
+        
+        let darkening = CGFloat(indexPath.row) / CGFloat(tempArray.count)
+        cell.nameLabel?.backgroundColor = FlatMintDark().darken(byPercentage: darkening)
+        cell.emailLabel?.backgroundColor = FlatMintDark().darken(byPercentage: darkening)
+        cell.periodLabel?.backgroundColor = FlatMintDark().darken(byPercentage: darkening)
         cell.nameLabel?.font = UIFont.boldSystemFont(ofSize: 17.0)
         cell.emailLabel?.font = UIFont.systemFont(ofSize: 12.0)
         cell.periodLabel?.font = UIFont.systemFont(ofSize: 12.0)
-        cell.backgroundColor = FlatMintDark().darken(byPercentage: CGFloat(indexPath.row) / CGFloat(tempArray.count))
+        cell.backgroundColor = FlatMintDark().darken(byPercentage: darkening)
         
         return cell
     }
@@ -120,6 +124,13 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             print("Error fetching data from context, \(error)")
         }
         self.tableView.reloadData()
+    }
+    
+    func deleteItem(indexPath: IndexPath) {
+        context.delete(tempArray[indexPath.row])
+        tempArray.remove(at: indexPath.row)
+        self.tableView.deleteRows(at: [indexPath], with: .fade)
+        saveItems()
     }
 
 }
@@ -146,24 +157,24 @@ extension MainViewController: UISearchBarDelegate {
 }
 
 //MARK: - SwipeCell
-extension MainViewController: SwipeTableViewCellDelegate {
-    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
-        guard orientation == .right else { return nil }
-        
-        let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
-            // handle action by updating model with deletion
-        }
-        
-        // customize the action appearance
-        deleteAction.image = UIImage(named: "delete")
-        
-        return [deleteAction]
-    }
-    
-    func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeOptions {
-        var options = SwipeOptions()
-        options.expansionStyle = .destructive
-        options.transitionStyle = .reveal
-        return options
-    }
-}
+//extension MainViewController: SwipeTableViewCellDelegate {
+//    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+//        guard orientation == .right else { return nil }
+//
+//        let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
+//            action.fulfill(with: .delete)
+//            self.deleteItem(indexPath: indexPath)
+//        }
+//
+//        deleteAction.image = UIImage(named: "delete")
+//
+//        return [deleteAction]
+//    }
+//
+//    func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeOptions {
+//        var options = SwipeOptions()
+//        options.expansionStyle = .destructive
+//        options.transitionStyle = .reveal
+//        return options
+//    }
+//}

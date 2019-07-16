@@ -156,7 +156,6 @@
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.15101002159999999" green="0.56891876460000002" blue="0.43715286250000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="emailLabel" destination="7Ah-o1-lyU" id="qre-se-dR1"/>
